@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        
+        <h2>Finding HTML Elements by TagName</h2>
+
+        <div>
+            <p> Hello Worlds - p1</p>
+        </div>
+
+        <p>Hello Worlds - p2</p>
+        
+        <p>Hello Worlds - p3</p>
+
+
+        <script>
+            var x = document.getElementsByTagName('p');
+            console.log(x);
+
+            x[0].innerHTML = 'Yeni text metin - p1';
+            x[1].innerHTML = 'Yeni text metin - p2';
+            x[2].style.color = 'blue';
+            x[2].innerHTML = x[0].innerHTML
+        
+        </script>
+
+
+
+    </body>
+</html>
+
+<!-- 
+getElementsByTagName  --- ayni HTML Tag'ler ile bir array olusturur.
+                          Parent veya child/ children olmasi önemli degil
+                          Hangi Tag'e ulasmak istiyor isek ona göre array'in index numarasini
+                          kullanmamiz gerekmektedir. -->

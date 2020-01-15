@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p {
+                color: green;
+            }
+            .intro {
+                color: red;
+            }
+            #demo {
+                color: blue;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <p>Hello World</p>
+
+        <p class="intro">The DOM is very useful</p>
+        <p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+      
+        <p id="demo">Paragraph - id1</p>
+        <p id="demo">Paragraph - id2</p>
+
+        <script>
+            
+            var x = document.querySelector('#demo');
+            x.style.color = 'black';
+            x.style.fontWeight = 'bold';  // camelCase dikkat , cunku JS kodu
+
+
+            // p class= intro olanlarin background'u yellow olacak
+            var y = document.querySelectorAll('.intro');
+
+            var i = 0;
+            while (i < y.length) {
+                y[i].style.background = 'yellow';
+                i +=1;
+            }
+            // y[0].style.backgroundColor = 'yellow';  -- calismaz , cunku y bir array
+            
+
+            // ilk p tag'ini hedef aliyoruz
+            // var z = document.querySelectorAll('p');
+            // console.log(z[0]);
+
+            var z = document.querySelector('p');
+            z.style.fontFamily = 'Helvetica';
+            z.style.fontSize = '25px';
+
+
+        
+        </script>
+        
+    </body>
+</html>
+
+
+<!-- 
+querySelector veya querySelectorAll , ikisindede tag, class name ve id'leri css'te yazdigimiz gibi parantez icerisine yazmak zorundayiz. 
+
+querySelector -- uyum sagladigi ilk element'i hedef alir
+
+querySelectorAll  -- uyum sagladigi tum elementleri array mantigi ile hedef alir
+-->

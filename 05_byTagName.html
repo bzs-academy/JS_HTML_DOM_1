@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+
+        <p>Bir ucgenin alan hesabi</p>
+
+        Taban Kenari : <br>
+        <input type="number">
+        <br><br>
+        Yükseklik : <br>
+        <input type="number">
+        <br><br>
+        <input type="submit" value="Hesapla">
+
+        <p></p>
+        
+        <script>
+            document.getElementsByTagName('input')[2].addEventListener('click', () => {
+                var data = document.getElementsByTagName('input');
+
+                var alan = ( data[0].value * data[1].value / 2 ).toFixed(2);
+
+                document.getElementsByTagName('p')[1].innerHTML = `Ücgenin alani : ${alan} m2`;
+
+            })
+        
+        </script>
+    </body>
+</html>

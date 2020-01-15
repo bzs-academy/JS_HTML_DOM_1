@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+            .intro {
+                color: red;
+            }
+            .demo {
+                color: blue;
+            }
+            .text {
+                background: yellow;
+            }
+            
+            
+        </style>
+        
+    </head>
+    <body>
+        <p>Hello World</p>
+
+        <p class="intro">The DOM is very useful</p>
+        <p class="intro">This example demonstrates the <b>querySelector and add class</b> method.</p>
+      
+        <p>Paragraph - 1</p>
+        <p>Paragraph - 2</p>
+
+        <script>
+
+            var x = document.querySelectorAll('p');
+            console.log(x);
+
+            //  class attribute uygulama farkliligi
+
+            // attribute 1. yöntem ile
+            // x[3].class = 'demo';   --- calismaz
+            x[3].className = 'demo';
+
+
+            // attribute 2. yöntem ile
+            //x[4].setAttribute('className', 'demo' );  --- calismaz
+            x[4].setAttribute('class', 'demo' );
+
+            //-----------------------------------------------------
+
+            // style atribute uygulama farkliligi
+
+            // 1. yöntem ve tercih edilen dogru yöntem
+            var y = document.querySelector('p b');
+            y.style.color = 'blue';
+            y.style.textDecoration = 'underline';
+            y.style.fontSize = '25px';
+
+            // 2. yöntem ve tercih edilmeyen yanlis yöntem
+            // var y = document.querySelector('p b');
+            // y.setAttribute('style', 'color: blue');
+            // y.setAttribute('style', 'text-decoration : underline');
+            
+            
+            // add new class to <p>
+            x[3].classList.add('text');
+
+            x[1].classList.add('text');
+
+            x[1].classList.remove('intro');
+
+
+        
+        </script>
+        
+    </body>
+</html>
+
+<!-- 
+1. element.attribute = new value	            ----        Change the attribute value of an HTML element
+
+2. element.setAttribute(attribute, value)	    ----        Change the attribute value of an HTML element
+ -->
